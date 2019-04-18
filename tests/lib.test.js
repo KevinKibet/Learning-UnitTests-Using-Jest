@@ -30,10 +30,42 @@ it('should return a 0 if the input is zero', ()=>{
 
 describe('strings', ()=>{
 
-	it('should return a string if the input is string', ()=>{
+it('should return a string if the input is string', ()=>{
    const result = lib.strings('kevinkibet');
    expect(result).toBe('welcome kevinkibet');
    expect(result).toMatch(/kevinkibet/);
    expect(result).toContain('kibet');
 })
+})
+
+
+
+//Testing arrays
+
+describe('getCurrency', ()=>{
+
+it('should return supported currencies', ()=>{
+
+	const result = lib.getCurrency();
+ //Too general tests
+ expect(result).toBeDefined();
+ expect(result).not.toBeNull();
+
+ //Too specific tests
+ expect(result[0]).toBe('KSH');
+ expect(result[1]).toBe('USH');
+ expect(result[2]).toBe('TSH');
+ expect(result.length).toBe(3);
+
+ //Proper way tests
+ expect(result).toContain('KSH');
+ expect(result).toContain('TSH');
+ expect(result).toContain('USH');
+
+ //Ideal way
+ expect(result).toEqual(expect.arrayContaining(['USH', 'KSH', 'TSH']));
+
+})
+
+ 
 })

@@ -12,3 +12,10 @@ module.exports.strings = function(name){
 
 	return 'welcome '+name ;
 }
+
+//Testing arrays
+
+module.exports.getCurrency = function(){
+
+	return ['KSH', 'USH','TSH'] ;
+}
