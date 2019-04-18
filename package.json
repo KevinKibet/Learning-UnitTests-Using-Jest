@@ -1,0 +1,19 @@
+{
+  "name": "unittests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinKibet/Learning-UnitTests-Using-Jest.git"
+  },
+  "author": "KevinKibet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinKibet/Learning-UnitTests-Using-Jest/issues"
+  },
+  "homepage": "https://github.com/KevinKibet/Learning-UnitTests-Using-Jest#readme"
+}
