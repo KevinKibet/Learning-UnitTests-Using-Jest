@@ -1,5 +1,5 @@
 //Testing Numbers
-module.exports.absoute = function(number){
+module.exports.absolute = function(number){
 
 if (number >0) return number;
 if (number <0) return -number;
