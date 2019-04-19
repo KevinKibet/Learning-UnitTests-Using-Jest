@@ -26,3 +26,14 @@ module.exports.getCurrency = function(){
 module.exports.getProduct= function(productId){
 	return {id: productId, price: 10}
 }
+
+
+
+
+//Testing exceptions
+
+module.exports.registerUser = function(username){
+  if(!username) throw new Error('username in mandatory');
+
+  return{id: new Date().getTime(), username: username}
+}
