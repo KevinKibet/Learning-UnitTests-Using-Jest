@@ -19,3 +19,10 @@ module.exports.getCurrency = function(){
 
 	return ['KSH', 'USH','TSH'] ;
 }
+
+
+
+//Testing objects
+module.exports.getProduct= function(productId){
+	return {id: productId, price: 10}
+}

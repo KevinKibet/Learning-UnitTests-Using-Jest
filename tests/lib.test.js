@@ -69,3 +69,23 @@ it('should return supported currencies', ()=>{
 
  
 })
+
+
+
+
+//Testing Objects
+describe('getProduct', ()=>{
+it('should retunthe product given Id',()=>{
+   const result = lib.getProduct(1);
+
+   //strict equality
+   expect(result).toEqual({id: 1,price: 10});
+
+   //Less strict
+   expect(result).toMatchObject({id: 1, price: 10});
+   expect(result).toHaveProperty('id', 1);
+
+
+})
+
+})
