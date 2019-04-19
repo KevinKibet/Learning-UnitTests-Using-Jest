@@ -1,4 +1,4 @@
-
+const db = require('../db')
 const lib = require('../lib.js');
 
 //Testing Nummbers
@@ -103,7 +103,7 @@ describe('register', ()=>{
    		lib.registerUser(a)	
    		}).toThrow();
    	})
-
+  
 
    })
 
@@ -114,4 +114,27 @@ describe('register', ()=>{
    	 expect(result).toMatchObject({username: "kevinkibet"});
    	 expect(result.id).toBeGreaterThan(0);
    })
+})
+
+
+
+
+
+
+
+//Testing mock function
+
+
+describe('applyDiscount', ()=>{
+	it('should apply 10% discount if customer has more than 10 points', ()=>{
+       db.getCustomerSync=function(customerId){
+       	console.log('fake reading customer..');
+       	return {id : customerId, points: 20}
+
+       }
+
+        const order = {customerId:1, totalPrice: 10}
+        lib.applyDiscount(order);
+		expect(order.totalPrice).toBe(9);
+	})
 })
